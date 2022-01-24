@@ -14,10 +14,10 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.menuItem = [
-      { text: 'Home', patch:'/' },
-      { text: 'About', patch:'/' },
-      { text: 'Service', patch:'/' },
-      { text: 'Contact', patch:'/' }
+      { text: 'Home', patch:'/filter' },
+      { text: 'About', patch:'/filter' },
+      { text: 'Service', patch:'/filter' },
+      { text: 'Contact', patch:'/filter' }
     ]
   }
 
