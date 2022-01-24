@@ -1,0 +1,29 @@
+<div class="container">
+    <ng-select class="py-5" [multiple]="true" [(ngModel)]="levels">
+        <ng-option *ngFor="let level of levelsSelect" [value]="level.name">{{level.name_esp}}</ng-option>
+    </ng-select>
+    
+
+
+
+    <table class="table" *ngIf="levels.length > 0">
+        <thead>
+            <tr>
+                <th scope="col">Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <div  *ngFor="let item of data | levelFilter:levels">
+                <tr>      
+                    <th  scope="row">{{item }}
+                    </th>
+                  
+                <tr>
+                
+            </div>
+
+
+        </tbody>
+    </table>
+</div>
