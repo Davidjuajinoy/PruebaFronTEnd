@@ -3,6 +3,10 @@
 
 ## Routes
 
+### https://pruebadavidhernandez.netlify.app/ : LandingPAGE
+### https://pruebadavidhernandez.netlify.app/filter : Filtro 
+#### Darle click en cualquier link de la navegacion lo llevara a el filtro.
+
 ### http://localhost:4200/  : LandingPAGE
 ### http://localhost:4200/filter : Filtro
 
