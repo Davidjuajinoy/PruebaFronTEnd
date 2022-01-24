@@ -1,0 +1,92 @@
+<section class="generic-section   hv-100" [ngClass]="{'bg-yellow-600':bgColor=='yellow'}">
+    <div class="container hv-100">
+        <div [ngClass]="{'text-dark':bgColor=='light'}"
+            class="d-flex flex-column align-items-center justify-content-center pt-5 h-100 text-light">
+            <h3 class="title__generic ">{{dataSection.dataSection.title}}</h3>
+            <p class="text__generic">{{dataSection.dataSection.text}}</p>
+        </div>
+        <div class="row h-100">
+
+            <ng-container *ngIf="!dataPriceOn && !dataTeamOn && !dataRecentPostOn">
+                <ng-container *ngTemplateOutlet="veterinarianSection;"></ng-container>
+            </ng-container>
+
+
+            <ng-container *ngIf="dataPriceOn">
+                <ng-container *ngTemplateOutlet="priceSection;"></ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="dataTeamOn">
+                <ng-container *ngTemplateOutlet="teamSection;"></ng-container>
+            </ng-container>
+
+
+            <ng-container *ngIf="dataRecentPostOn">
+                <ng-container *ngTemplateOutlet="recentPostsSection;"></ng-container>
+            </ng-container>
+            
+
+        </div>
+    </div>
+</section>
+
+
+<ng-template #veterinarianSection>
+    <div *ngFor="let data of dataSection.dataCard;let i=index" [ngClass]="{'col-sm-12':i == 2}"
+        class="col-lg-4 col-sm-6 mb-5  d-flex flex-column  align-items-center  justify-content-center  h-100 ">
+        <img class="img-generic" [src]="data.src" alt="image veterinarian">
+        <h4 class="text-light title_image">{{data.title}}</h4>
+        <p class="text-light text-image text-center">{{data.text}}</p>
+    </div>
+</ng-template>
+
+
+
+<ng-template #priceSection>
+    <div *ngFor="let price of dataSection.dataCard;let i=index" [ngClass]="{'col-sm-12':i == 2}"
+        class="col-lg-4 col-sm-6 mb-5  d-flex flex-column  align-items-center  justify-content-center  h-100 ">
+        <img class="img-generic" [src]="price.src" alt="image dog">
+        <div class="price d-flex align-items-center justify-content-center text-light mt-3">
+            <p class="text-decoration-line-through p-2">{{price.price | currency:'':'symbol-narrow' :'2.0'}}</p>
+            <p class="p-2">{{price.discountPrice | currency:'':'symbol-narrow' :'2.0'}}</p>
+        </div>
+        <button class="btn btn--large  btn--water rounded-pill">{{price.btnText | titlecase}}</button>
+    </div>
+</ng-template>
+
+
+
+<ng-template #teamSection>
+    <div *ngFor="let data of dataSection.dataCard;let i=index" [ngClass]="{'col-sm-12':i == 2}"
+        class="col-lg-4 col-sm-6 mb-5  d-flex flex-column  align-items-center  justify-content-center  h-100 text-dark">
+        <img class="img-generic" [src]="data.src" alt="image veterinarian">
+        <h4 class=" title_team fw-bold">{{data.name}}</h4>
+        <p class=" text_team text-center text-uppercase">{{data.charge}}</p>
+
+        <div class="icon-social">
+            <i class="icon icon--instagram"></i>
+            <i class="icon icon--facebook"></i>
+            <i class="icon icon--twitter"></i>
+            <i class="icon icon--whatsApp"></i>
+
+        </div>
+
+
+    </div>
+</ng-template>
+
+
+
+<ng-template #recentPostsSection>
+    <div *ngFor="let data of dataSection.dataCard;let i=index" 
+    [ngClass]="{'col-sm-12':i == 2}"
+    class="col-lg-4 col-sm-6 h-100 mb-5">
+        <img [src]="data.src" class="card-img-top" alt="...">
+        <div  [ngClass]="{'shadow border-0':i == 1}" class="card-body border-top-0 border border-2 px-4">
+          <h5 class="card-title  card-title__custom ">{{data.title}}</h5>
+          <p class="card-subtitle text-uppercase">{{data.subtitle}}</p>
+          <p class="card-text">{{data.text}}</p>
+          <a class="btn p-0 btn-text ">{{data.btnText}}+</a>
+        </div>
+      </div>
+</ng-template>

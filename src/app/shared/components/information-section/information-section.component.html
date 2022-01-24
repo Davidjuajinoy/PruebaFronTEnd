@@ -1,0 +1,21 @@
+<section class="information-section container vh-100">
+    <div class="row h-100 justify-content-center align-items-center justify-items-center  align-content-center gap-20 ">
+        <div class="col d-flex  flex-column justify-content-center  align-items-center">
+            <h3 class="title__information fw-bold text-dark mb-4">{{dataInformation.title}}</h3>
+            <p class="text-dark  subtitle__information mb-4">{{dataInformation.text}}</p>
+
+            <div [ngClass]="{'justify-content-end':positionImg == 'left','justify-content-start':positionImg =='right'}" 
+             class="gap-20 w-100 d-flex align-items-center text-dark">
+                <button class="btn btn-information outline-0 ">Our Service</button>
+            </div>
+        </div>
+        <div [ngClass]="{'order-md-first':positionImg == 'left'}"
+            class="col w-100 d-flex justify-content-center align-items-center">
+            <div class="image  position-relative">
+                <img [src]="dataInformation.src"
+                    [ngClass]="{'shadow-block--left':positionImg == 'left','shadow-block':positionImg =='right'}"
+                    class="img-information  img-cover filter-yellow " alt="img dog">
+            </div>
+        </div>
+    </div>
+</section>

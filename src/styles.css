@@ -1,1 +1,100 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  /* var  */
+  font-family: "Poppins", sans-serif;
+  --color-1: #daac00;
+  --color-2: #fcc302;
+  --color-3: #00bec9;
+  --color-4: #d8bf5e; /*filter*/
+  --color-5: #00bec9;
+  --color-6: #00bec9;
+  --color-7: #00bec9;
+  --color-8: #fff;
+}
+
+body{
+  height: 100vh;
+  width: 100%;
+}
+
+.bg-yellow {
+  background-color: var(--color-1);
+}
+
+.nav-link--big {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+}
+.nav-link--big:hover,
+.nav-link--big:focus {
+  color: #fff;
+}
+
+
+.outline-0 {
+  outline: none;
+}
+
+.bg-water {
+  background-color: var(--color-3);
+}
+
+.btn--water{
+  color: #fff;
+  background-color: var(--color-3);
+}
+.btn--water:hover{
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+
+btn:focus,
+a:focus {
+  outline: none ;
+}
+
+
+.br::after{
+  content: '\A'; white-space: pre;
+}
+
+
+.bg-yellow-600 {
+  background-color: var(--color-2);
+}
+
+
+.vh-10{
+  height: 10vh;
+}
+
+.vh-90{
+  height: 90vh;
+}
+.gap-20{
+  gap: 20px;
+}
+
+.img-custom {
+  height: 100%;
+  width: 20rem;
+  object-fit: contain;
+}
+
+
+
+@media screen and (max-width:600px)
+{
+  .img-custom {
+    height: 23rem;
+    width: 23rem;
+  }
+
+}

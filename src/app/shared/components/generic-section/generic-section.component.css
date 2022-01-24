@@ -1,0 +1,117 @@
+.title__generic {
+  font-size: 3.7rem;
+  margin-bottom: 30px;
+}
+
+.text__generic {
+  font-size: 1.5rem;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.img-generic {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.title_image {
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+
+.text-image {
+  font-size: 1.1rem;
+}
+
+.price {
+  font-size: 2rem;
+}
+
+.title_team {
+  margin-top: 30px;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+
+.text_team {
+  font-size: 1.2rem;
+}
+
+.icon-social {
+  display: flex;
+
+}
+.icon {
+  height: 25px;
+  width: 25px;
+  background-color: var(--color-2) !important;
+  border-radius: 50%;
+  margin: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.icon--facebook::before,
+.icon--instagram::before,
+.icon--twitter::before,
+.icon--whatsApp::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  filter: invert(96%) sepia(100%) saturate(0%) hue-rotate(62deg) brightness(104%) contrast(105%) ;
+
+}
+
+.icon--facebook::before{
+  background: url('../../../../assets/icon/facebook.svg');
+}
+.icon--instagram::before{
+  background: url('../../../../assets/icon/instagram.svg');
+}
+.icon--twitter::before{
+  background: url('../../../../assets/icon/twitter.svg');
+  filter: invert(96%) sepia(100%) saturate(0%) hue-rotate(62deg) brightness(174%) contrast(105%) ;
+}
+.icon--whatsApp::before{
+  background: url('../../../../assets/icon/whatsApp.svg');
+}
+
+.btn--large {
+  
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.card-title__custom{
+  font-size: 1.5rem ;
+  letter-spacing: .5px;
+  font-weight: 00;
+}
+
+.card-subtitle{
+  color: var(--color-3);
+  font-weight: 500;
+  font-size: .9rem;
+}
+
+.btn-text{
+  color: var(--color-3);
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1000px) {
+  .text__generic {
+    width: 100%;
+  }
+}

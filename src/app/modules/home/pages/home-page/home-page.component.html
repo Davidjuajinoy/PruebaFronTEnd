@@ -1,0 +1,59 @@
+<div class="home-page ">
+    <app-header></app-header>
+
+    <!-- Section Hero -->
+    <app-hero-section></app-hero-section>
+    <!-- End Section Hero -->
+
+    <!-- Information1  -->
+    <app-information-section [dataInformation]="dataInformationSection[0]"></app-information-section>
+    <!-- End Information1  -->
+
+    <!-- Services Section -->
+    <app-generic-section bgColor="yellow" [dataSection]="dataServicesSection"></app-generic-section>
+    <!-- End Services Section -->
+
+    <!-- Information 2 -->
+    <app-information-section [dataInformation]="dataInformationSection[1]" positionImg="left"></app-information-section>
+    <!-- End Information 2 -->
+
+
+    <!-- Price Section -->
+    <app-generic-section bgColor="yellow" [dataSection]="dataPriceSection" [dataPriceOn]="true"></app-generic-section>
+    <!-- End Price Section -->
+
+    <!-- Team Section -->
+    <app-generic-section [dataTeamOn]="true" [dataSection]="dataTeamSection"></app-generic-section>
+    <!-- End Team Section -->
+
+
+    <!-- Banner Section -->
+    <section class="banner position-relative vh-50">
+        <div class="container h-100 position-relative z-index-5">
+            <div class="row  h-100 text-light  ">
+                <div *ngFor="let banner of dataBannerSection; let i=index" [ngClass]="{'col-sm-12 col-12':i==2}"
+                    class="col-sm-6 col-md-4 col-6 d-flex flex-column justify-content-center align-items-center">
+                    <img [src]="banner.src" class="img-icon">
+                    <p class="number-clients mt-4">
+                        +{{banner.clients}}
+                    </p>
+                    <h3 class="banner-text fw-bold">{{banner.text}}</h3>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+    <!-- End Banner Section -->
+
+    <!-- Recent Posts Section -->
+    <app-generic-section [dataRecentPostOn]="true" [dataSection]="dataRecentPostSection"></app-generic-section>
+    <!-- End Recent Posts Section -->
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+    <!-- EndFooter -->
+
+
+</div>

@@ -1,0 +1,22 @@
+<nav class="navbar sticky-top navbar-expand-lg bg-yellow h-100">
+    <div class="container  w-100">
+      <a class="navbar-brand" ><img src="assets/images/logo.png" class="img-fluid" alt="logo-company"></a>
+      <button  class="navbar-toggler rounded-pill bg-light outline-0 border border-warning " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation bg-primary">
+        <span class="navbar-toggler-icon  outline-0 "></span>
+      </button>
+      <div class="collapse navbar-collapse w-100 d-lg-flex justify-content-md-between align-items-md-center" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto gap-flex d-flex justify-content-around align-items-center  w-100 ">
+          <li class="nav-item" *ngFor="let menu of menuItem">
+            <a [routerLink]="menu.patch" class="nav-link nav-link--big ">{{menu.text | titlecase}}</a>
+        </ul>
+        
+
+        <div class="d-flex shadow-search my-4">
+          <input type="text" class=" input-search border-0 text-light w-100" placeholder="Search.." >
+          <span class="input-group-text position-relative border-bottom-0 border-top-0  "></span>
+        </div>
+
+
+      </div>
+    </div>
+  </nav>
